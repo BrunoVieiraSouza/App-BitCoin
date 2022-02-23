@@ -14,35 +14,35 @@ class BitCoinVC: UIViewController {
     @IBOutlet weak var bttAtualizar: UIButton!
     @IBOutlet weak var label: UILabel!
     
-    //MARK: - VARIAVEL PARA SALVAR O PRECO DO BITCOIN
-    var bitCoin: Welcome!
     
-    //MARK: CICLO DE VIDA
+    let controller: BitCoinController = BitCoinController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadPrice()
+        controller.loadPriceBitCoin() 
     }
     
     //MARK: - IBACTIONS
     @IBAction func atualizarPreco(_ sender: UIButton) {
-        loadPrice()
+        
     }
     
-    //MARK: - METODOS PARA CARREGAR E CONFIGURAR INFORMACOES TRAZIDAS PELA API
-    func loadPrice() {
-        self.bttAtualizar.setTitle("Atualizando...", for: .normal)
-        bttAtualizar.alpha = 0.1
-        API.bitCoinRetrono { tickerJson in
-            self.bitCoin = tickerJson
-            DispatchQueue.main.async {
-                let numero = Float(self.bitCoin.ticker.buy)!
-                let formatado = self.formatterPrice(preco: NSNumber(value: numero))
-                self.label.text = "R$ " + formatado
-                self.bttAtualizar.setTitle("Atualizar", for: .normal)
-                self.bttAtualizar.alpha = 1
-            }
-        }
+    //MARK:
+    func showPriceBit(price: String) {
+        label.text = price
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     func formatterPrice(preco: NSNumber) -> String {
         let nf = NumberFormatter()

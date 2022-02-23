@@ -9,7 +9,7 @@ import Foundation
 
 class API {
     
-    static func bitCoinRetrono (_ onCompletion: @escaping (Welcome) -> Void) {
+    static func bitCoinRetorno (_ onCompletion: @escaping (Welcome) -> Void) {
         if let url = URL(string: "https://www.mercadobitcoin.net/api/BTC/ticker") {
             let tarefa = URLSession.shared.dataTask(with: url) { data, response, error in
                 if error == nil {

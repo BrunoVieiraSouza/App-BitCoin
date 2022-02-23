@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B088AF3F27BEF2F9004CBC92 /* BitCoinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B088AF3E27BEF2F9004CBC92 /* BitCoinController.swift */; };
 		B0DE4F44275E60B9002D4831 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DE4F43275E60B9002D4831 /* AppDelegate.swift */; };
 		B0DE4F46275E60B9002D4831 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DE4F45275E60B9002D4831 /* SceneDelegate.swift */; };
 		B0DE4F48275E60B9002D4831 /* BitCoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DE4F47275E60B9002D4831 /* BitCoinVC.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B088AF3E27BEF2F9004CBC92 /* BitCoinController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitCoinController.swift; sourceTree = "<group>"; };
 		B0DE4F40275E60B9002D4831 /* Preco BitCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Preco BitCoin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0DE4F43275E60B9002D4831 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0DE4F45275E60B9002D4831 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +67,6 @@
 				B0DE4F67275E9A1F002D4831 /* NetWorking */,
 				B0DE4F66275E9A0A002D4831 /* AppDelegate */,
 				B0DE4F65275E99FA002D4831 /* Ressource */,
-				B0DE4F63275E99CA002D4831 /* Utills */,
 				B0DE4F5E275E995D002D4831 /* Modules */,
 				B0DE4F54275E60C2002D4831 /* Info.plist */,
 				B0DE4F4C275E60BA002D4831 /* Preco_BitCoin.xcdatamodeld */,
@@ -94,6 +95,7 @@
 		B0DE4F60275E9987002D4831 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B088AF3E27BEF2F9004CBC92 /* BitCoinController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -108,21 +110,6 @@
 			sourceTree = "<group>";
 		};
 		B0DE4F62275E998D002D4831 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B0DE4F63275E99CA002D4831 /* Utills */ = {
-			isa = PBXGroup;
-			children = (
-				B0DE4F64275E99EC002D4831 /* Model */,
-			);
-			path = Utills;
-			sourceTree = "<group>";
-		};
-		B0DE4F64275E99EC002D4831 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				B0DE4F5A275E6DA9002D4831 /* Model.swift */,
@@ -241,6 +228,7 @@
 				B0DE4F4E275E60BA002D4831 /* Preco_BitCoin.xcdatamodeld in Sources */,
 				B0DE4F5D275E775C002D4831 /* API.swift in Sources */,
 				B0DE4F46275E60B9002D4831 /* SceneDelegate.swift in Sources */,
+				B088AF3F27BEF2F9004CBC92 /* BitCoinController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +377,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2NH26F8H5Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Preco BitCoin/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -416,6 +405,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2NH26F8H5Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Preco BitCoin/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
