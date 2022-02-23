@@ -15,40 +15,31 @@ class BitCoinVC: UIViewController {
     @IBOutlet weak var label: UILabel!
     
     
-    let controller: BitCoinController = BitCoinController()
+    var controller: BitCoinController! = BitCoinController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        controller.loadPriceBitCoin() 
+        loadPrice()
     }
     
     //MARK: - IBACTIONS
     @IBAction func atualizarPreco(_ sender: UIButton) {
-        
+        loadPrice()
     }
     
-    //MARK:
-    func showPriceBit(price: String) {
-        label.text = price
+    func loadPrice() {
+        controller.loadPriceBitCoin()
+        guard let price = controller.priceBitCoin?.ticker.buy else {return}
+        guard let value = Float(price) else {return}
+        label.text = "R$ \(value)"
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     func formatterPrice(preco: NSNumber) -> String {
         let nf = NumberFormatter()
         nf.numberStyle = .decimal
         nf.locale = Locale(identifier: "pt_BR")
-        
+
         if let precoFinal = nf.string(from: preco) {
             return precoFinal
         }

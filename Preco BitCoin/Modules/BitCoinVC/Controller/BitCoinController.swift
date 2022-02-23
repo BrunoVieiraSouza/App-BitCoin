@@ -9,16 +9,11 @@ import UIKit
 
 class BitCoinController {
     
-    private var priceBitCoin: Welcome?
+    var priceBitCoin: Welcome?
     
-    func loadPriceBitCoin() {
-        API.bitCoinRetorno { tickerJson in
-            self.priceBitCoin = tickerJson
-            self.showPrice()
+    func loadPriceBitCoin () {
+        API.bitCoinRetorno { tickerBitCoin in
+            self.priceBitCoin = tickerBitCoin
         }
-    }
-    
-    func showPrice(){
-        guard let price = priceBitCoin?.ticker.buy else {return}
     }
 }
