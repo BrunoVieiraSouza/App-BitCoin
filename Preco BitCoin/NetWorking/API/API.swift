@@ -7,16 +7,26 @@
 
 import Foundation
 
+protocol APIReturnDelegate: AnyObject {
+    func returnDados(dados: Welcome)
+}
+
 class API {
     
-    static func bitCoinRetorno (_ onCompletion: @escaping (Welcome) -> Void) {
+    weak var delegate: APIReturnDelegate?
+    
+    init() {
+        bitCoinRetorno()
+    }
+    
+    func bitCoinRetorno() {
         if let url = URL(string: "https://www.mercadobitcoin.net/api/BTC/ticker") {
             let tarefa = URLSession.shared.dataTask(with: url) { data, response, error in
                 if error == nil {
                     if let dados = data {
                         do {
                             let dadosJson = try JSONDecoder().decode(Welcome.self, from: dados)
-                            onCompletion(dadosJson)
+                            self.delegate?.returnDados(dados: dadosJson)
                         } catch {
                             print("erro ao decodificar json")
                         }
