@@ -7,13 +7,30 @@
 
 import UIKit
 
+protocol BitCoinControllerDelegate: AnyObject {
+    func showPrice (price: String)
+}
+
 class BitCoinController {
     
-    var priceBitCoin: Welcome?
+    init() {
+        loadPriceBitCoin()
+    }
     
-    func loadPriceBitCoin () {
+    weak var delegate: BitCoinControllerDelegate?
+    private var priceBitCoin: Welcome?
+    
+    private func loadPriceBitCoin() {
         API.bitCoinRetorno { tickerBitCoin in
             self.priceBitCoin = tickerBitCoin
+            self.priceBit()
         }
     }
+    
+    private func priceBit() {
+        guard let priceBitCoin = priceBitCoin?.ticker.buy else { return }
+        delegate?.showPrice(price: priceBitCoin)
+    }
 }
+
+

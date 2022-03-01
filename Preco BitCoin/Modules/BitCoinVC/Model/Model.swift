@@ -18,3 +18,15 @@ struct Ticker: Codable {
         case date
     }
 }
+
+
+//func formatterPrice(preco: NSNumber) -> String {
+//    let nf = NumberFormatter()
+//    nf.numberStyle = .decimal
+//    nf.locale = Locale(identifier: "pt_BR")
+//
+//    if let precoFinal = nf.string(from: preco) {
+//        return precoFinal
+//    }
+//    return "0,00"
+//}
