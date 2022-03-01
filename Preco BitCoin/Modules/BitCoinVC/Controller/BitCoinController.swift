@@ -11,7 +11,7 @@ protocol BitCoinControllerDelegate: AnyObject {
     func showPrice (price: String)
 }
 
-class BitCoinController {
+final class BitCoinController {
     
     init() {
         loadPriceBitCoin()
@@ -32,5 +32,3 @@ class BitCoinController {
         delegate?.showPrice(price: priceBitCoin)
     }
 }
-
-
